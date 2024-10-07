@@ -4,12 +4,13 @@ async function fetchUserData () {
     try {
         const response = await fetch( apiUrl );
         const users = await response.json();
+        console.log(users)
         dataContainer.innerHTML = '';
         const userList = document.createElement( 'ul' );
         users.forEach(user => {
             let li = document.createElement( 'li' );
             li.textContent = user.name;
-            userList.append(li)
+            userList.appendChild( li );
         } );
         dataContainer.append( userList );
     } catch (error) {
