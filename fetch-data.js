@@ -7,9 +7,9 @@ async function fetchUserData () {
         dataContainer.innerHTML = '';
         const userList = document.createElement( 'ul' );
         users.forEach(user => {
-            let lst = document.createElement( 'li' );
-            lst.textContent = user.name;
-            userList.append(lst)
+            let li = document.createElement( 'li' );
+            li.textContent = user.name;
+            userList.append(li)
         } );
         dataContainer.append( userList );
     } catch (error) {
